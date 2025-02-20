@@ -42,6 +42,7 @@ def bubble_sort(array):
             if array[j - 1] > array[j]:
                 array[j - 1], array[j] = array[j], array[j - 1]
                 swapped = True
+
         if not swapped:
             break
     return array
@@ -161,16 +162,16 @@ return array
 def merge_sort(array):
     if len(array) <= 1:
         return array
-    
+
     mid = int(len(array)/2)
     arr1 = array[:mid]
     arr2 = array[mid:]
-    
+
     arr1 = merge_sort(arr1)
     arr2 = merge_sort(arr2)
-    
+
     array = merge(arr1, arr2)
-    
+
     return array
     
     
@@ -181,19 +182,19 @@ def merge(arr1, arr2):
         if arr1[0] > arr2[0]:
             array.append(arr2[0])
             del arr2[0]
-            
+
         else:
             array.append(arr1[0])
             del arr1[0]
-            
-    
+
+
     while len(arr1) > 0:
         array.append(arr1[0])
         del arr1[0]
     while len(arr2) > 0:
         array.append(arr2[0])
         del arr2[0]
-    
+
     return array
 ```
 
