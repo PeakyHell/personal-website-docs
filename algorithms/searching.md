@@ -1,5 +1,7 @@
 # Table of Contents
 1. [Introduction](#introduction)
+2. [Linear Search](#linear-search)
+3. [Binary Search](#binary-search)
 ===ENDTOC===
 
 # Searching algorithms
