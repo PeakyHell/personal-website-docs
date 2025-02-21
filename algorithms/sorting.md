@@ -12,6 +12,8 @@
 
 Sorting algorithms are a very import part of computer science, they are used in many situations and a lot of programs rely on their speed and efficiency. Here are some simple but powerful sorting algorithms.
 
+The content of this documentation is highly inspired by the 2023-2024 course notes from UCLouvain's "LINFO1103 - Introduction à l'algorithmique"
+
 ## Bubble Sort
 
 ### Principle

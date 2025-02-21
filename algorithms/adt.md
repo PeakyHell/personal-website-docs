@@ -17,6 +17,8 @@ A Stack is a collection of elements that can be added or removed according to th
 - The first element that can be removed (pop) is the last one that was inserted (push)
 - No element can be removed if the stack is empty
 
+The content of this documentation is highly inspired by the 2023-2024 course notes from UCLouvain's "LINFO1103 - Introduction à l'algorithmique"
+
 ### Specification
 
 ```python
