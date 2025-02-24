@@ -4,21 +4,19 @@
 3. [Binary Search](#binary-search)
 ===ENDTOC===
 
-# Searching algorithms
-
-## Introductiion
+# Introductiion
 
 Searching algorithms are a very import part of computer science, they are used in many situations and a lot of programs rely on their speed and efficiency. Here are some simple but powerful searching algorithms.
 
 The content of this documentation is highly inspired by the 2023-2024 course notes from UCLouvain's "LINFO1103 - Introduction à l'algorithmique"
 
-## Linear search
+# Linear search
 
-### Principle
+## Principle
 
 The Linear Search algorithm is a searching algorithm that search a value in an array by simply going through the whole array and returning the index of the value when it finds it.
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 for i ← 0 to n - 1 :
@@ -27,7 +25,7 @@ for i ← 0 to n - 1 :
 return -1
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def linear_search(array, key):
@@ -37,20 +35,20 @@ def linear_search(array, key):
     return -1
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Best case : O(1)
 &nbsp;&nbsp;&nbsp;&nbsp; - Worst case : O(n)
 &nbsp;&nbsp;&nbsp;&nbsp; - Average case : O(n)
 
-## Binary Search
+# Binary Search
 
-### Principle
+## Principle
 
 The Binary Search algorithm is a searching algorithm that search a value in a **sorted** array by recursively dividing the array in 2 and keeping the part where the value should be.
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 if low > high :
@@ -64,7 +62,7 @@ else :
     return binary_search(array, key, middle + 1, high)
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def binary_search(array, key, low, high):
@@ -79,7 +77,7 @@ def binary_search(array, key, low, high):
         return binary_search(array, key, middle + 1, high)
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Best case : O(1)

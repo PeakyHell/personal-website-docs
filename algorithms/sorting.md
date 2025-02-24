@@ -6,21 +6,19 @@
 5. [Merge Sort](#merge-sort)
 ===ENDTOC===
 
-# Sorting algorithms
-
-## Introduction
+# Introduction
 
 Sorting algorithms are a very import part of computer science, they are used in many situations and a lot of programs rely on their speed and efficiency. Here are some simple but powerful sorting algorithms.
 
 The content of this documentation is highly inspired by the 2023-2024 course notes from UCLouvain's "LINFO1103 - Introduction à l'algorithmique"
 
-## Bubble Sort
+# Bubble Sort
 
-### Principle
+## Principle
 
 The Bubble Sort algorithm is a sorting algorithm that sort an array by comparing adjacent elements and swapping them if they're in the wrong order. Its name comes from the fact that the biggest elements travel to the end of the list like a bubble going up in a water column.
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 for i ← n - 1 down to 0 :
@@ -34,7 +32,7 @@ for i ← n - 1 down to 0 :
 return array
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def bubble_sort(array):
@@ -49,20 +47,20 @@ def bubble_sort(array):
     return array
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Best case : O(n) comparisons and O(1) swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Worst case : O(n²) comparisons and O(n²) swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Average case : O(n²) comparisons and O(n²) swaps
 
-## Selection Sort
+# Selection Sort
 
-### Principle
+## Principle
 
 The Selection Sort algorithm is a sorting algorithm that sorts an array by repeatedly selecting the smallest element from the unsorted portion and putting it at the correct position.
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 for i ← 0 to n - 1 :
@@ -75,7 +73,7 @@ for i ← 0 to n - 1 :
 return array
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def selection_sort(array):
@@ -89,20 +87,20 @@ def selection_sort(array):
     return array
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Best case : O(n²) comparisons and O(1) swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Worst case : O(n²) comparisons and O(n) swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Average case : O(n²) comparisons and O(n) swaps
 
-## Insertion Sort
+# Insertion Sort
 
-### Principle
+## Principle
 
 The Insertion Sort algorithm is a sorting algorithm that sort an array by taking each element one by one and putting it in the correct place in a sorted sublist.
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 for i ← 1 to n - 1 :
@@ -115,7 +113,7 @@ for i ← 1 to n - 1 :
 return array
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def insertion_sort(array):
@@ -129,20 +127,20 @@ def insertion_sort(array):
     return array
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Best case : O(n) comparisons and O(1) swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Worst case : O(n²) comparisons and swaps<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - Average case : O(n²) comparisons and swaps
 
-## Merge Sort
+# Merge Sort
 
-### Principle
+## Principle
 
 The Merge Sort algorithm is a sorting algorithm that sort an array by dividing the array in smaller arrays recursively until it only needs to sort arrays of 0 or 1 elements. It uses the principle of *Divide and Conquer*
 
-### Pseudo Code
+## Pseudo Code
 
 ```txt
 if n ≤ 1:
@@ -157,7 +155,7 @@ merge(l1, l2)
 return array
 ```
 
-### Implementation
+## Implementation
 
 ```python
 def merge_sort(array):
@@ -188,7 +186,7 @@ def merge(arr1, arr2):
     return array
 ```
 
-### Complexity
+## Complexity
 
 Time complexity :<br>
 &nbsp;&nbsp;&nbsp;&nbsp; - All cases : Θ(n log n)

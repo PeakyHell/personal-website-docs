@@ -5,13 +5,11 @@
 4. [Binary Tree](#binary-tree)
 ===ENDTOC===
 
-# Abstract Data Types
+# Introduction
 
-## Introduction
+# Stack
 
-## Stack
-
-### Principle
+## Principle
 
 A Stack is a collection of elements that can be added or removed according to the LIFO (last-in first-out) principle.
 - The first element that can be removed (pop) is the last one that was inserted (push)
@@ -19,7 +17,7 @@ A Stack is a collection of elements that can be added or removed according to th
 
 The content of this documentation is highly inspired by the 2023-2024 course notes from UCLouvain's "LINFO1103 - Introduction à l'algorithmique"
 
-### Specification
+## Specification
 
 ```python
 class Stack:
@@ -35,21 +33,21 @@ class Stack:
         """
 ```
 
-### Implementation
+## Implementation
 
 The best ways to implement a Stack are :
 - with a dynamic array
 - with a linked list 
 
-## Queue
+# Queue
 
-### Principle
+## Principle
 
 A Queue is a collection of elements that can be added or removed according to the FIFO (first-in first-out) principle.
 - The first element that can be removed (dequeue) is the oldest one that was inserted (enqueue) and has not yet been removed
 - No element can be removed if the queue is empty
 
-### Specification
+## Specification
 
 ```python
 class Queue:
@@ -65,21 +63,21 @@ class Queue:
         """
 ```
 
-### Implementation
+## Implementation
 
 The best ways to implement a Queue are :
 - with a linked list
 - with a circular dynamic array
 
-## Binary Tree
+# Binary Tree
 
-### Principle
+## Principle
 
 A Binary Tree is a recursive collection of elements defined by two principles :
 - a tree contains a root node
 - the root node has 0 or 2 children each of which is itself a binary tree
 
-### Specification
+## Specification
 
 ```python
 class BinaryTree:
@@ -97,7 +95,7 @@ class BinaryTree:
             self.right = None
 ```
 
-### Implementation
+## Implementation
 
 The best ways to implement a Binary Tree are :
 - with a linked structure
