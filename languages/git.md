@@ -133,3 +133,257 @@ Now that your repositories are linked, you can push to your GitHub repo.
 ```bash
 git push origin main
 ```
+
+Or you can also set an upstream branch to be able to use git push only without needing to specify the branch every time.
+
+```bash
+git push --set-upstream origin main
+```
+
+# Basic Snapshotting
+
+## add
+
+## status
+
+## diff
+
+## commit
+
+## notes
+
+## restore
+
+## reset
+
+## rm
+
+## mv
+
+# Branching and Merging
+
+## branch
+
+## checkout
+
+## switch
+
+## merge
+
+### fast-forward merge
+
+> A fast-forward merge is when you merge a remote commit and you haven't done any local commit in the meantime so the remote commit just moves the branch pointer forward.
+
+### --ff
+
+By default merge will use this option
+
+Using --ff with git merge will make a fast-forward merge.  
+
+```
+local : A --- B
+
+remote : A --- B --- C
+```
+
+```bash
+git merge --ff
+```
+
+```
+local : A --- B --- C
+
+remote : A --- B --- C
+```
+
+If you had local commits, it'll create a merge commit.
+
+```
+local : A --- B --- C
+
+remote : A --- B --- D
+```
+
+```bash
+git merge --ff
+```
+
+```
+local : A --- B --- C --- E
+			   \         /
+				--- D ---
+
+remote : A --- B --- C
+```
+
+### --ff-only
+
+Using --ff-only with git merge will make a fast-forward merge.
+
+```
+local : A --- B
+
+remote : A --- B --- C
+```
+
+```bash
+git merge --ff-only
+```
+
+```
+local : A --- B --- C
+
+remote : A --- B --- C
+```
+
+If you had local commits, instead of making a merge commit, the merging will stop.
+
+```
+local : A --- B --- C
+
+remote : A --- B --- D
+```
+
+```bash
+git merge --ff-only
+```
+
+```
+local : A --- B --- C --- /
+
+remote : A --- B --- D
+```
+
+## mergetool
+
+## log
+
+## stash
+
+## tag
+
+## worktree
+
+# Sharing and Updating Projects
+
+## fetch
+
+git fetch downloads commits made on the remote repository but does not incorporate them into your local repository.
+
+## pull
+
+git pull is equivalent to git fetch + git merge, so the command is gonna download the commits from the remote branch and then directly merge them with your local branch. 
+
+```bash
+git pull
+# Equivalent to :
+git fetch + git merge
+```
+
+You can also modify the behavior of git pull by using these different flags.
+
+### --rebase
+
+ The --rebase flag or the git.rebase config set to True will rebase instead of merge.
+
+```bash
+git pull --rebase
+# or
+git config set pull.rebase True
+git pull
+# Equivalent to :
+git fetch + git rebase
+```
+
+### --ff
+
+The --ff flag will make a fast-forward merge if possible, else it will make a merge commit.
+
+```bash
+git pull --ff
+# Equivalent to :
+git fetch + git merge --ff
+```
+
+### --ff-only
+
+The --ff-only flag will make a fast-forward merge if possible, else it will stop the merge operation.
+
+```bash
+git pull --ff-only
+# Equivalent to :
+git fetch + git merge --ff-only
+```
+
+## push
+
+## remote
+
+## submodule
+
+# Inspection and Comparison
+
+## show
+
+## log
+
+## diff
+
+## difftool
+
+## range-diff
+
+## shortlog
+
+## describe
+
+# Patching
+
+## apply
+
+## cherry-pick
+
+## diff
+
+## rebase
+
+If you fetch new remote commits but already had local commits you can use rebase to do the following :
+- stash your local commit
+- incorporate the remote commit
+- replay your local commit on top of the remote commit
+
+```
+local : A --- B --- C
+
+remote : A --- B --- D
+```
+
+```bash
+git fetch
+```
+
+```
+local : A --- B --- C
+			   \
+			    --- D (remote branch)
+```
+
+```bash
+git rebase
+```
+
+```
+local : A --- B --- D --- C'
+```
+
+## revert
+
+# Debugging
+
+## bisect
+
+## blame
+
+## grep
+
+# Email
