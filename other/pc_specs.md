@@ -11,6 +11,8 @@
 
 In this documentation we will review some computer components terminologies to better understand them and help you choose your components for your computer.
 
+Here is a useful website that helps you build your computer with compatibles components : [PCPartPicker](https://pcpartpicker.com/)
+
 # CPU
 
 ## Cores
