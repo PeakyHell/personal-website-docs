@@ -1,7 +1,7 @@
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Data Types](#data-types)
-3. [Operators](#operators)
+3. [Operators](#operators-1)
 4. [Control Structures](#control-structures)
 5. [Functions](#functions)
 6. [Object Oriented Programming](#object-oriented-programming)
